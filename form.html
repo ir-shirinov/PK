@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="знакомство, найти друга, социальная сеть">
+  <meta name="decription" content="Лучшее приложения для поиска новых друзей">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Конкурс</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel ="preload" href="/fonts/opensans.woff2" as="font">
+  <link rel ="preload" href="/fonts/opensansbold.woff2" as="font">
+</head>
+  <body>
+
+    <header class="page-header">
+      <a href="" class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк" width="75" height="22">
+      </a>
+      
+      <nav class="main-nav">
+        <button class="main-nav__btn"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__items"><a class="main-nav__link">Главная</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+
+      <p class="page-main__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+
+      <form class="competition" method="post" action="https://echo.htmlacademy.ru/">
+        <fieldset class="competition__user">
+          <label class="competition__description" for="surname">фамилия:</label>
+          <input class="competition__text" id="surname" type="text" name="surname" placeholder="Укажите фамилию *">
+          <label class="competition__description" for="name">имя:</label>
+          <input class="competition__text" id="name" type="text" name="name" placeholder="Укажите ваше имя *">
+          <label class="competition__description" for="lastname">отчество:</label>
+          <input class="competition__text" id="lastname" type="text" name="lastname" placeholder="Ну и отчество тоже">
+        </fieldset>
+
+        <fieldset class="competition__progress">
+          <legend class="competition__title">Ваши безбашенные достижения в путешествии</legend>
+          <input class="visually-hidden" id="shrink" type="checkbox" name="progress" value="shrink" checked>
+          <label class="competition__check-radio" for="shrink">Сделал селфи с акулой</label>
+          <input class="visually-hidden" id="bitch" type="checkbox" name="progress" value="bitch" checked>
+          <label class="competition__check-radio" for="bitch">Обгорел на пляже</label>
+          <input class="visually-hidden" id="norris" type="checkbox" name="progress" value=norris"">
+          <label class="competition__check-radio" for="norris">Видел Чака Норриса</label>
+          <input class="visually-hidden" id="souvenir" type="checkbox" name="progress" value="souvenir">
+          <label class="competition__check-radio" for="souvenir">Накупил сувениров</label>
+          <input class="visually-hidden" id="tower" type="checkbox" name="progress" value="tower" checked>
+          <label class="competition__check-radio" for="tower">Удержал башню</label>
+          <input class="visually-hidden" id="hotel" type="checkbox" name="progress" value="hotel">
+          <label class="competition__check-radio" for="hotel" >Разгромил отель</label>
+        </fieldset>
+
+        <fieldset class="competition__contacts">
+          <legend class="competition__title">С каким приложением путешествовали?</legend>
+          <input class="visually-hidden" id="ios" type="radio" name="platform" value="ios" checked>
+          <label class="competition__check-radio" for="ios">Pink для iOS</label>
+          <input class="visually-hidden" id="android" type="radio" name="platform" value="android">
+          <label class="competition__check-radio" for="android">Pink на Android</label>
+          <input class="visually-hidden" id="windows" type="radio" name="platform" value="windows">
+          <label class="competition__check-radio" for="windows">Windows Phone</label>
+        </fieldset>
+
+        <fieldset class="competition__comment">
+          <legend class="competition__title">Опишите свои эмоции</legend>
+          <textarea class="competition__feedback" placeholder="Можно прая в красках, не стесняясь в выражениях"></textarea>>
+        </fieldset>
+
+        <button class="competition__submit" type="submit">отправить форму</button>
+
+        <p class="competition__remark"><span class="competition__red">*</span>-обязательные поля</p>
+      </form>
+
+
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo" href="index.html"><img src="" alt="Логотип"></a>
+
+      <ul class="social">
+        <li class="social__items">
+          <a class="social__link" href="https://twitter.com/">
+            <svg>
+              <use></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__items">
+          <a class="social__link" href=https://www.facebook.com/"">
+            <svg>
+              <use></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__items">
+          <a class="social__link" href="https://www.youtube.com/">
+            <svg>
+              <use></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <a class="page-footer__copyright" src="https://htmlacademy.ru">Разработано <svg class="page-footer__copyright"><use></use></svg></a>
+
+    </footer>
+
+  </body>
+</html>
