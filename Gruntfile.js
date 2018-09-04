@@ -90,7 +90,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["img/**/*.{png,jpg}"],
+          src: ["img/*.{png,jpg}"],
           dest: 'build/'
           }]
       }
@@ -129,6 +129,7 @@ module.exports = function(grunt) {
           expand: true,
           src: [
             "css/normalize.css",
+            "img/*.{png,jpg,webp}",
             "fonts/**/*.{woff,woff2}",
             "js/**/*.js",
           ],
