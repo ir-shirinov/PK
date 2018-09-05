@@ -1,0 +1,106 @@
+.price{
+  overflow: hidden;
+
+  padding-bottom: 47px;
+
+
+  background-color: #f2f2f2;
+}
+
+.price__list {
+  .listnone();
+
+  display: flex;
+  width: 260.63%;
+  margin-bottom: 40px;
+
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.price__item {
+  width: 33.3%;
+
+  &:nth-of-type(2){
+    border-left: 2px solid #e5e5e5;
+    border-right: 2px solid #e5e5e5;
+  }
+}
+
+.price__title {
+  position: relative;
+
+  margin: 0;
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 21px;
+
+  .fontCSL(#fff,18px,32px);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+
+  background-color: @darkblue;
+}
+
+.price__title--hit {
+  background-image: url("../img/bg-hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &::before {
+    content: "ХИТ";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+
+    text-transform: uppercase;
+
+    transform: rotate(-45deg);
+  }
+}
+
+.price__cost{
+  display: block;
+
+  .fontCSL(#fff,24px,30px);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.price__about {
+  position: relative;
+
+  margin: 0;
+  padding: 14.5px 22px;
+  padding-right: 68px;
+
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  background-color: #fff;
+  border-bottom: 2px solid #e5e5e5;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.price__presence {
+  position: absolute;
+  bottom: 17px;
+  right: 17px;
+}
+
+
+#price-1:checked ~ .price__list {
+  margin-left: 6%;
+}
+
+#price-2:checked ~ .price__list {
+  margin-left: -80%;
+}
+
+#price-3:checked ~ .price__list {
+  margin-left: -166%;
+}

@@ -26,19 +26,12 @@ module.exports = function(grunt) {
     browserSync: {
       server: {
         bsFiles: {
-          src: [
-            "build/*.html",
-            "build/css/*.css"
-          ]
+          src: ['build/css/*.css','build/*.html']
         },
         options: {
-          server: "build",
+          server: "build/",
           watchTask: true,
-          notify: false,
-          open: true,
-          cors: true,
           browser: "firefox",
-          ui: false
         }
       }
     },
@@ -47,6 +40,10 @@ module.exports = function(grunt) {
       style: {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
+      },
+      html: {
+        files: ["*.html"],
+        tasks: ["posthtml", "htmlmin"]
       },
       sprite: {
         files: ["img/sprite/*.svg"],
@@ -98,12 +95,11 @@ module.exports = function(grunt) {
 
     svgstore: {
       options: {
-        includeTitleElement: false,
-        cleanup: ["fill"]
+        includeTitleElement: false
       },
       sprite: {
         files: {
-          "build/img/sprite.svg": ["img/sprite/icon-*.svg"]
+          "build/img/sprite.svg": ["img/sprite/*.svg"]
         }
       }
     },
@@ -129,7 +125,7 @@ module.exports = function(grunt) {
           expand: true,
           src: [
             "css/normalize.css",
-            "img/*.{png,jpg,webp}",
+            "img/*.{png,jpg,webp,svg}",
             "fonts/**/*.{woff,woff2}",
             "js/**/*.js",
           ],
@@ -159,7 +155,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'build/js/script.min.js': ['build/js/script.js']
+          'build/js/script.min.js': ['js/script.js']
         }
       }
     }
@@ -167,6 +163,7 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("build", [
     "clean",
     "copy",
@@ -181,7 +178,7 @@ module.exports = function(grunt) {
     ]);
 
   grunt.registerTask("image", ["imagemin", "cwebp"]);
-  grunt.registerTask("serve", ["browserSync", "watch"]);
+
 
 
 

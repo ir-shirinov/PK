@@ -1,0 +1,86 @@
+.photo__list {
+  .listnone();
+
+  margin: 0 auto;
+}
+
+.photo__items {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 320px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.photo__items--hit {
+  position: relative;
+
+  &::before {
+    content: "панорама дня";
+
+    position: absolute;
+    top: 0;
+    right: 6.25%;
+
+    width: 140px;
+    height: 35px;
+
+    .fontCSL(#fff,12px,35px);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #d22856;
+  }
+}
+
+.photo__img {
+  display: block;
+
+  margin: 0 6.25%;
+
+  &--width {
+    margin: 0 auto;
+  }
+}
+
+.photo__comment {
+  margin: 0 6.25%;
+  padding: 17px 5.31%;
+  padding-bottom: 20px;
+
+  background-color:#f2f2f2
+}
+
+.photo__author {
+  font-weight: 700;
+  font-style: normal;
+  text-align: left;
+}
+
+.photo__date {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.photo__text {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.photo__like{
+  display: inline-block;
+
+  padding-left: 33px;
+
+  .fontCSL(#d22856,12px,24px);
+  text-transform: uppercase;
+
+  background-image: url("../img/bg-heart.svg");
+  background-repeat: no-repeat;
+  background-position: left 0 top 50%;
+}

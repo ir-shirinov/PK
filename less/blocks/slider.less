@@ -1,0 +1,50 @@
+.slider {
+  margin: 0 auto;
+  width: 100px;
+  height: 12px;
+
+  font-size: 0;
+  text-align: center;
+  line-height: 12px;
+}
+
+.slider__button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 13px;
+
+  font-size: 14px;
+
+  background-color: @darkblue;
+  border: 3px solid #fff;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &:last-of-type{
+    margin-right: 0;
+  }
+
+  &--white{
+    border-color: #f2f2f2;
+  }
+
+  &:hover {
+    opacity: .3;
+  }
+
+  &:active {
+    opacity: .1;
+  }
+}
+
+#review-1:checked ~ .slider--review .slider__button[for="review-1"],
+#review-2:checked ~ .slider--review .slider__button[for="review-2"],
+#review-3:checked ~ .slider--review .slider__button[for="review-3"],
+#price-1:checked ~ .slider--price .slider__button[for="price-1"],
+#price-2:checked ~ .slider--price .slider__button[for="price-2"],
+#price-3:checked ~ .slider--price .slider__button[for="price-3"] {
+  border-color: @darkblue;
+  background-color: #fff;
+}

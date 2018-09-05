@@ -1,0 +1,32 @@
+.btn {
+  display: block;
+  width: 88%;
+  margin: 0 auto;
+  padding: 15px 10px;
+
+  .fontCSL();
+  text-transform: uppercase;
+  font-weight: 700;
+
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255,255,255,.3);
+  }
+
+  &--disabled {
+    background-color: #e5e5e5;
+    &:hover {
+      background-color: #e5e5e5;
+    }
+    &:active {
+    color: rgb(255,255,255);
+    }
+  }
+}
