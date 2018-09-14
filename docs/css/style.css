@@ -131,7 +131,7 @@ input.visually-hidden {
 .link {
   display: block;
   color: #d22856;
-  font-size: 24px;
+  font-size: 23px;
   line-height: 30px;
   font-weight: 300;
 }
@@ -1168,7 +1168,7 @@ input.visually-hidden {
     padding: 0 130px;
   }
 }
-.contacts__wrapper::after {
+.contacts__wrapper::before {
   content: "";
   position: absolute;
   bottom: -62px;
