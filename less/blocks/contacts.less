@@ -18,25 +18,6 @@
     justify-content: space-between;
     padding: 0 130px;
   }
-
-  &::before{
-    content: "";
-
-    position: absolute;
-    bottom: -62px;
-    left: 50%;
-    z-index: 1;
-
-    width: 100%;
-    height: 62px;
-
-    background-image: url("../img/bg-triangle-white-footer.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100% 62px;
-
-    transform: translateX(-50%);
-  }
 }
 
 .contacts__title {
@@ -128,6 +109,25 @@
 .contats__container {
   position: relative;
   min-height: 200px;
+
+  &::before{
+    content: "";
+
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    z-index: 1;
+
+    width: 100%;
+    height: 62px;
+
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+
+    transform: translateX(-50%);
+  }
 
   @media (min-width: @tablet) {
     min-height: 375px;
