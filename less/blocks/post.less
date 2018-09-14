@@ -1,6 +1,14 @@
 .post {
   margin: 0 auto;
   padding-top: 43px;
+
+  @media (min-width: @tablet) {
+    width: 660px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 940px;
+  }
 }
 
 .post__title{
@@ -11,6 +19,10 @@
   .fontCSL(@darkblue,14px,30px);
   font-weight: 400;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+  }
 }
 
 .post__wrapper {
@@ -18,13 +30,44 @@
   padding-bottom: 28px;
 
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 60px 80px;
+  }
 }
 
 .post__photo {
   display: block;
 
-  margin: 0 auto;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+  }
+}
+
+.post__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.post_instrument {
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 260px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 410px;
+  }
 }
 
 .post__tooling {
@@ -33,18 +76,68 @@
   align-items: center;
   margin-bottom: 36px;
   padding: 0 20.625%;
+
+  @media (min-width: @tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
 }
 
 .post__tool {
   display: block;
 
   &:hover {
-    fill: #8d949b;
+    @media (max-width: @tablet - .1px) {
+      fill: #8d949b;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    display: inline-block;
+
+    fill: #d22856;
   }
 }
 
 .post__tool--active {
   fill: #d22856;
+}
+
+.post__tool--crop {
+  @media (min-width: @tablet) {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.post__tool--fill {
+  @media (min-width: @tablet) {
+    width: 24px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.post__tool--contrast {
+  @media (min-width: @tablet) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .post__range {
@@ -56,6 +149,39 @@
   height: 2px;
 
   background-color: #000;
+
+  @media (min-width: @tablet) {
+    display: inline-block;
+    width: 200px;
+    margin: 0;
+  }
+
+  &--all {
+    @media (min-width: @tablet) {
+      display: none;
+    }
+  }
+
+  &--crop {
+    display: none;
+    @media (min-width: @tablet) {
+      display: block;
+    }
+  }
+
+  &--fill {
+    display: none;
+    @media (min-width: @tablet) {
+      display: block;
+    }
+  }
+
+  &--contrast {
+    display: none;
+    @media (min-width: @tablet) {
+      display: block;
+    }
+  }
 }
 
 .post__switch {
@@ -78,10 +204,68 @@
   }
 }
 
+.post__crop {
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 72px;
+
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 30px;
+  }
+}
+
+.post__fill {
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 72px;
+
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 30px;
+  }
+}
+
+.post__contrast {
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 72px;
+
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 30px;
+  }
+}
+
 .post__publicate {
   padding: 38px 6.25%;
   padding-bottom: 13px;
   border-top: 1px solid #dddfe0;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    border: none;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .post__btn {
@@ -132,5 +316,20 @@
 
       background-color: #b5b9be;
     }
+  }
+
+  @media (min-width: @tablet) {
+    width: 260px;
+  }
+
+  @media (min-width: @desktop) {
+    display: inline-block;
+    width: 180px;
+  }
+}
+
+.post__btn--send {
+  @media (min-width: @desktop) {
+    margin: 0;
   }
 }

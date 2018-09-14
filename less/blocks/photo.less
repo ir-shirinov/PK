@@ -2,27 +2,81 @@
   .listnone();
 
   margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 660px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 960px;
+    padding: 0 10px;
+  }
 }
 
 .photo__items {
-  margin: 0 auto;
-  margin-bottom: 20px;
   width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+    margin-bottom: 20px;
+    }
+  }
 }
 
-.photo__items--hit {
+.photo-items {
+  width: 320px;
+}
+
+.photo-items--panorama {
+  @media (min-width: @tablet) {
+    position: relative;
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 0;
+    padding-top: 480px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 506px;
+    width: 940px;
+  }
+}
+
+.photo__img {
+  display: block;
+}
+
+.photo__img--panorama {
   position: relative;
+  width: 320px;
+  margin-left: -20px;
 
   &::before {
     content: "панорама дня";
 
     position: absolute;
     top: 0;
-    right: 6.25%;
+    right: 20px;
 
     width: 140px;
     height: 35px;
@@ -34,24 +88,47 @@
 
     background-color: #d22856;
   }
-}
 
-.photo__img {
-  display: block;
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: 0;
+    left: 50%;
 
-  margin: 0 6.25%;
+    width: 660px;
+    margin: 0;
 
-  &--width {
-    margin: 0 auto;
+    transform: translateX(-50%);
+
+    &::before {
+    top: 60px;
+    right: 40px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    width: 1200px;
   }
 }
 
+.photo__picture {
+  display: block;
+}
+
 .photo__comment {
-  margin: 0 6.25%;
+  position: relative;
+
+  margin: 0 auto;
   padding: 17px 5.31%;
   padding-bottom: 20px;
 
-  background-color:#f2f2f2
+  background-color:#f2f2f2;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+  }
 }
 
 .photo__author {
@@ -83,4 +160,16 @@
   background-image: url("../img/bg-heart.svg");
   background-repeat: no-repeat;
   background-position: left 0 top 50%;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+  }
+}
+
+.photo__like--panorama {
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: 17px;
+    right: 33px;
+  }
 }

@@ -19,17 +19,20 @@
 
     <header class="page-header page-header--background">
       <a class="page-header__logo" href="index.html">
-        <svg class="page-header__logo-image" fill="#ffffff" width="75" height="22"><use xlink:href="#logo-pink-white-mobile"></use></svg>
+        <picture class="page-header__logo-image">
+          <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img src="img/logo-pink-white-mobile.svg" alt="Лого Пинк">
+        </picture>
       </a>
 
       <button class="page-header__btn"></button>
 
       <nav class="main-nav show">
         <ul class="main-nav__list">
-          <li class="main-nav__items"><a class="main-nav__link" href="index.html"><span>Главная</span></a></li>
-          <li class="main-nav__items"><a class="main-nav__link main-nav__items--active"><span>Фотографии</span></a></li>
-          <li class="main-nav__items"><a class="main-nav__link" href="form.html"><span>Конкурс</span></a></li>
-          <li class="main-nav__items"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__items"><a class="main-nav__link main-nav__link--active">Фотографии</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
@@ -37,23 +40,31 @@
     <main class="page-main">
       <h1 class="page-main__title">Фотографии пользователей</h1>
 
-      <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи!<br>Видите, как не хватает ваших?</p>
+      <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! <span class="page-main__span">Видите, как не хватает ваших?<span></p>
 
       <section class="photo">
         <h2 class="visually-hidden">Фотографии</h2>
 
         <ul class="photo__list">
-          <li class="photo__items photo__items--hit">
-            <img class="photo__img photo__img--width" width="320" height="137" src="img/panorama-mobile@1x.jpg" alt="Панорама моста">
+          <li class="photo__items photo-items--panorama">
+            <picture class="photo__img photo__img--panorama">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама моста">
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Анна</cite>
               <time class="photo__date" datetime="2013-11-20T14:54">(5 минут назад)</time>
               <p class="photo__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <span class="photo__like">Нравится: 215</span>
+              <span class="photo__like photo__like--panorama">Нравится: 215</span>
             </blockquote>
           </li>
           <li class="photo__items">
-            <img class="photo__img" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фото авто">
+            <picture class="photo__img">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото авто">
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Левон</cite>
               <time class="photo__date" datetime="2013-11-20T14:54">(5 часов назад)</time>
@@ -62,7 +73,11 @@
             </blockquote>
           </li>
           <li class="photo__items">
-            <img class="photo__img" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фото барабанов" >
+            <picture class="photo__img">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фото барабанов">
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Антон</cite>
               <time class="photo__date" datetime="2013-11-20T14:54">(12 часов назад)</time>
@@ -71,7 +86,11 @@
             </blockquote>
           </li>
           <li class="photo__items">
-            <img class="photo__img" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фото окон" >
+            <picture class="photo__img">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фото окон">
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Борис</cite>
               <time class="photo__date" datetime="2013-11-20T14:54">(20 часов назад)</time>
@@ -80,7 +99,11 @@
             </blockquote>
           </li>
           <li class="photo__items">
-            <img class="photo__img" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фото ярмарки" >
+            <picture class="photo__img">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фото ярмарки" >
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Сергей</cite>
               <time class="photo__date" datetime="2013-11-20T14:54">(25 часов назад)</time>
@@ -89,7 +112,11 @@
             </blockquote>
           </li>
           <li class="photo__items">
-            <img class="photo__img" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фото гор" >
+            <picture class="photo__img">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фото гор">
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Максим</cite>
               <time class="photo__date" datetime="2013-11-20T14:54">(40 часов назад)</time>
@@ -98,7 +125,11 @@
             </blockquote>
           </li>
           <li class="photo__items">
-            <img class="photo__img" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фото крыла самолета" >
+            <picture class="photo__img">
+              <source class="photo__picture" media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+              <source class="photo__picture" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+              <img class="photo__picture" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фото крыла самолета">
+            </picture>
             <blockquote class="photo__comment">
               <cite class="photo__author">Надежда</cite>
               <time datetime="2013-11-20T14:54">(45 часов назад)</time>
@@ -113,22 +144,43 @@
         <h2 class="post__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
 
         <div class="post__wrapper">
-          <img class="post__photo" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Ваше фото">
+          <picture class="post__photo">
+            <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+            <img class="post__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Ваше фото">
+          </picture>
 
-          <div class="post__tooling">
-            <svg class="post__tool post__tool--active" width="48" height="48" fill="#b5b9be"><use xlink:href="#icon-editor-crop"></use></svg>
-            <svg class="post__tool" width="48" height="48" fill="#b5b9be"><use xlink:href="#icon-editor-fill"></use>
-            </svg>
-            <svg class="post__tool" width="33" height="33" fill="#b5b9be"><use xlink:href="#icon-editor-contrast"></use></svg>
-          </div>
 
-          <div class="post__range">
-            <div class="post__switch"></div>
-          </div>
+          <div class="post_instrument">
+            <div class="post__tooling">
+              <div class="post__crop">
+                <svg class="post__tool post__tool--crop post__tool--active" width="48" height="48" fill="#b5b9be"><use xlink:href="#icon-editor-crop"></use></svg>
+                <div class="post__range post__range--crop">
+                  <div class="post__switch"></div>
+                </div>
+              </div>
+              <div class="post__fill">
+                <svg class="post__tool post__tool--fill" width="48" height="48" fill="#b5b9be"><use xlink:href="#icon-editor-fill"></use></svg>
+                <div class="post__range post__range--fill">
+                  <div class="post__switch"></div>
+                </div>
+              </div>
+              <div class="post__contrast">
+                <svg class="post__tool post__tool--contrast" width="33" height="33" fill="#b5b9be"><use xlink:href="#icon-editor-contrast"></use></svg>
+                <div class="post__range post__range--contrast">
+                  <div class="post__switch"></div>
+                </div>
+              </div>
+            </div>
 
-          <div class="post__publicate">
-            <button class="post__btn post__btn--send" type="button">Запостить</button>
-            <button class="post__btn post__btn--cancel" type="button">Отмена</button>
+            <div class="post__range post__range--all">
+              <div class="post__switch"></div>
+            </div>
+
+            <div class="post__publicate">
+              <button class="post__btn post__btn--send" type="button">Запостить</button>
+              <button class="post__btn post__btn--cancel" type="button">Отмена</button>
+            </div>
           </div>
         </div>
       </section>

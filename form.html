@@ -19,16 +19,19 @@
 
     <header class="page-header page-header--background">
       <a class="page-header__logo" href="index.html">
-        <svg class="page-header__logo-image" fill="#ffffff" width="75" height="22"><use xlink:href="#logo-pink-white-mobile"></use></svg>
+        <picture class="page-header__logo-image">
+          <source media="(min-width:660px)" srcset="img/logo-pink-white-tablet.svg">
+          <img src="img/logo-pink-white-mobile.svg" alt="Лого Пинк">
+        </picture>
       </a>
 
       <button class="page-header__btn"></button>
 
       <nav class="main-nav show">
         <ul class="main-nav__list">
-          <li class="main-nav__items"><a class="main-nav__link" href="index.html"><span>Главная</span></a></li>
-          <li class="main-nav__items"><a class="main-nav__link" href="photo.html"><span>Фотографии</span></a></li>
-          <li class="main-nav__items"><a class="main-nav__link main-nav__items--active"><span>Конкурс</span></a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__items"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+          <li class="main-nav__items"><a class="main-nav__link main-nav__link--active">Конкурс</a></li>
           <li class="main-nav__items"><a class="main-nav__link" href="https://htmlacademy.ru">HTML ACADEMY</a></li>
         </ul>
       </nav>
@@ -37,39 +40,66 @@
     <main class="page-main">
       <h1 class="page-main__title page-main__title--bottom">Конкурс на самое безбашенное путешествие с Пинк</h1>
 
-      <p class="page-main__text page-main__text--bottom">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="page-main__text page-main__text--bottom">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__text--hide">Пожалуйста, заполните форму ниже:</span></p>
 
       <form class="competition" method="get" action="https://echo.htmlacademy.ru/">
         <fieldset class="competition__group competition__group--user">
-          <label class="competition__description" for="surname">фамилия:</label>
-          <input class="competition__text" id="surname" type="text" name="surname" placeholder="Укажите фамилию *" required>
-          <label class="competition__description" for="name">имя:</label>
-          <input class="competition__text" id="name" type="text" name="name" placeholder="Укажите ваше имя *" required>
-          <label class="competition__description" for="lastname">отчество:</label>
-          <input class="competition__text" id="lastname" type="text" name="lastname" placeholder="Ну и отчество тоже">
+          <div class="competition__container">
+            <label class="competition__description" for="surname">фамилия:</label>
+            <input class="competition__text" id="surname" type="text" name="surname" placeholder="Укажите фамилию *" required>
+          </div>
+
+          <div class="competition__container">
+            <label class="competition__description" for="name">имя:</label>
+            <input class="competition__text" id="name" type="text" name="name" placeholder="Укажите ваше имя *" required>
+          </div>
+
+          <div class="competition__container">
+            <label class="competition__description" for="lastname">отчество:</label>
+            <input class="competition__text" id="lastname" type="text" name="lastname" placeholder="Ну и отчество тоже">
+          </div>
         </fieldset>
 
         <fieldset class="competition__group competition__group--progress">
           <legend class="competition__title">Ваши безбашенные достижения в путешествии</legend>
-          <input class="competition__checkbox visually-hidden" id="shrink" type="checkbox" name="progress" value="shrink" checked>
-          <label class="competition__check" for="shrink">Сделал селфи с акулой</label>
-          <input class="competition__checkbox visually-hidden" id="bitch" type="checkbox" name="progress" value="bitch" checked>
-          <label class="competition__check" for="bitch">Обгорел на пляже</label>
-          <input class="competition__checkbox visually-hidden" id="norris" type="checkbox" name="progress" value=norris"">
-          <label class="competition__check" for="norris">Видел Чака Норриса</label>
-          <input class="competition__checkbox visually-hidden" id="souvenir" type="checkbox" name="progress" value="souvenir">
-          <label class="competition__check" for="souvenir">Накупил сувениров</label>
-          <input class="competition__checkbox visually-hidden" id="tower" type="checkbox" name="progress" value="tower" checked>
-          <label class="competition__check" for="tower">Удержал башню</label>
-          <input class="competition__checkbox visually-hidden" id="hotel" type="checkbox" name="progress" value="hotel">
-          <label class="competition__check" for="hotel" >Разгромил отель</label>
+          <div class="competition__wrapper">
+            <input class="competition__checkbox visually-hidden" id="shrink" type="checkbox" name="progress" value="shrink" checked>
+            <label class="competition__check" for="shrink">Сделал селфи с акулой</label>
+          </div>
+          <div class="competition__wrapper">
+            <input class="competition__checkbox visually-hidden" id="bitch" type="checkbox" name="progress" value="bitch" checked>
+            <label class="competition__check" for="bitch">Обгорел на пляже</label>
+          </div>
+          <div class="competition__wrapper">
+            <input class="competition__checkbox visually-hidden" id="norris" type="checkbox" name="progress" value=norris"">
+            <label class="competition__check" for="norris">Видел Чака Норриса</label>
+          </div>
+          <div class="competition__wrapper">
+            <input class="competition__checkbox visually-hidden" id="souvenir" type="checkbox" name="progress" value="souvenir">
+            <label class="competition__check" for="souvenir">Накупил сувениров</label>
+          </div>
+          <div class="competition__wrapper">
+            <input class="competition__checkbox visually-hidden" id="tower" type="checkbox" name="progress" value="tower" checked>
+            <label class="competition__check" for="tower">Удержал башню</label>
+          </div>
+          <div class="competition__wrapper">
+            <input class="competition__checkbox visually-hidden" id="hotel" type="checkbox" name="progress" value="hotel">
+            <label class="competition__check" for="hotel" >Разгромил отель</label>
+          </div>
         </fieldset>
 
         <fieldset class="competition__group competition__group--tel">
-          <label class="competition__description" for="tel">номер телефона</label>
-          <input class="competition__text" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
-          <label class="competition__description" for="email">адрес почты</label>
-          <input class="competition__text" id="email" type="email" name="email" placeholder="Введите почту *" required>
+          <legend class="competition__title competition__title--tablet">Контактная информация</legend>
+
+          <div class="competition__container competition__container--column">
+            <label class="competition__description competition__description--tel" for="tel">номер телефона</label>
+            <input class="competition__text competition__text--tel" id="tel" type="tel" name="tel" placeholder="Номер, пожалуйста">
+          </div>
+
+          <div class="competition__container competition__container--column">
+            <label class="competition__description competition__description--email" for="email">адрес почты</label>
+            <input class="competition__text competition__text--email" id="email" type="email" name="email" placeholder="Введите почту *" required>
+          </div>
         </fieldset>
 
         <fieldset class="competition__group competition__group--platform">
@@ -87,9 +117,11 @@
           <textarea class="competition__feedback" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="5"></textarea>
         </fieldset>
 
-        <button class="competition__submit btn" type="submit">отправить форму</button>
+        <div class="competition__container competition__container--btn">
+          <button class="competition__submit btn" type="submit">отправить форму</button>
 
-        <p class="competition__remark"><span class="competition__red">*</span>— обязательные поля</p>
+          <p class="competition__remark"><span class="competition__red">*</span>— обязательные поля</p>
+        </div>
       </form>
 
 

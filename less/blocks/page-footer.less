@@ -4,6 +4,26 @@
   align-items: center;
   margin: 0 auto;
   padding: 40px 6.25%;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 3.03%;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 130px;
+  }
+}
+
+.page-footer--main-page {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: flex;
+  }
 }
 
 .page-footer__logo {
@@ -18,5 +38,15 @@
 
   &:active {
     opacity: .3;
+  }
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__copyright {
+  @media (min-width: @desktop) {
+    font-size: 18px;
   }
 }
