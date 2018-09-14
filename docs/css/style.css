@@ -186,6 +186,7 @@ input.visually-hidden {
   border-top: 4px solid #fff;
   border-bottom: 4px solid #fff;
   background-color: transparent;
+  outline: none;
 }
 .page-header__btn::before {
   content: "";
@@ -196,6 +197,7 @@ input.visually-hidden {
   height: 4px;
   margin-top: -2px;
   background-color: #fff;
+  outline: none;
 }
 .page-header__btn:hover {
   border-color: #d22856;
@@ -225,6 +227,7 @@ input.visually-hidden {
   width: 30px;
   height: 30px;
   border: none;
+  outline: none;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -234,6 +237,7 @@ input.visually-hidden {
   width: 30px;
   height: 5px;
   margin-top: -2.5px;
+  outline: none;
 }
 .page-header__btn--open::after {
   content: "";
@@ -244,6 +248,7 @@ input.visually-hidden {
   height: 30px;
   margin-left: -2.5px;
   background-color: #fff;
+  outline: none;
 }
 .page-header__btn--open:hover::after {
   background-color: #d22856;
@@ -1142,7 +1147,7 @@ input.visually-hidden {
     padding: 0 130px;
   }
 }
-.contacts__wrapper::before {
+.contacts__wrapper::after {
   content: "";
   position: absolute;
   bottom: -62px;
