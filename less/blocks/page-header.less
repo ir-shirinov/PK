@@ -74,17 +74,29 @@
 
   &:hover {
     border-color: rgb(210,40,86);
+    outline: none;
 
     &::before {
       background-color: rgb(210,40,86);
+      outline: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      outline: none;
     }
   }
 
   &:active {
     border-color: rgba(210,40,86,.3);
+    outline: none;
 
     &::before {
       background-color: rgba(210,40,86,.3);
+      outline: none;
     }
   }
 }
@@ -141,12 +153,26 @@
   &:hover {
     &::after {
       background-color: rgb(210,40,86);
+      outline: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      outline: none;
+    }
+
+    &::before {
+      outline: none;
     }
   }
 
   &:active {
     &::after {
       background-color: rgba(210,40,86,.3);
+      outline: none;
     }
   }
 }
